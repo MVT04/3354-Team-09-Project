@@ -1,0 +1,12 @@
+Section 5.3
+  K1: Fail, the supporting actor in UC-03, the extension framework, is not included in the domain model
+  K2: Fail, the credential controller and generator controller are not in the domain diagram
+  K3: Pass. Although note that 10 or 10a should be in the loop or added a specific check for whether the 
+      AccountHolder accepts the rejects the password in 5.2.1. Also note that in 5.2.2 doesn’t allow for 
+      multiple credentials entries like email, backup pin, etc. 5.2.2 also has the expected pathway in alternate boxes.
+  K4: Pass, every step has a corresponding row
+  K5: Fail, UC-03 doesn’t match to FR-05, there’s lacking requirements for quality and constraints for all use cases in 4.2
+  K6: Pass, a credential is made in 5.2.2 and a password is generated in 5.2.1.
+
+Miscellaneous
+  - Formatting edits for consistency 
