@@ -1,3 +1,19 @@
+Section 0.2
+  CH-01: It would require learning a new library with complex topics. Additionally it would require the use of 
+         google authenticator, a mobile app. We don’t have the time or experience to make this a feasible feature.
+         Removal of 2FA features. Lowers our scope and makes our project much more feasible.
+         10/30/2026
+  CH-02: A web application cannot interact with the file system due to safety reasons. Thus in order to get around 
+         this for external back up storage, we would need to create a serverrelationship, which we don’t have 
+         the experience to do.
+         Makes our program one application on the computer. Unable to do autofilling anymore. Lowers our scope and makes our project much more feasible.
+         10/30/2026
+  CH-03: It is not possible to interact with the web browser without being a web application. Furthermore, it would 
+         be very hard to implement even as a web application since websites have their own login page formats 
+         which would make it hard to identify inputs.
+         Not necessary to be a web application anymore. Lowers our scope and makes our project much more feasible.
+         10/30/2026
+
 Section 5.3
   K1: Fail, the supporting actor in UC-03, the extension framework, is not included in the domain model
   K2: Fail, the credential controller and generator controller are not in the domain diagram
