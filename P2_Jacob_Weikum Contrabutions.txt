@@ -78,6 +78,22 @@ S-04 Different Encryptions
        ADR–03 that with the same master password, the encryptions are still different
        Picture of credential files
 
+Section 10.2
+  P3 document analysis - 11/13/2026 - Group - Team meeting discussing P3 structure and template. 
+    Done when delegations are given out. 
+  Account System is completed - 11/18/2026 - Group - A user can create an account, log in, and log out.
+    There are different accounts that don’t overlap.
+  Password generator is completed - 11/20/2026 - Group - A password is generated based on constraints.
+  Credentials are able to be made and deleted - 11/25/2026 - Group - Credentials are able to be 
+    made and deleted and can use the password generator.
+  Credentials are encrypted - 11/30/2026 - Group - Credential data is encrypted
+  Export credentials - 12/2/2026 - Group - Able to export and import encrypted credentials.
+  Parts work together - 12/3/2026 - Group -An account holder is able to log in, create credentials, 
+    use the password generator, export credentials, and credential files should be encrypted.
+  Final Review and P3 is submitted - 12/9/2026 - Group - Final reviews and touches are done and P3 is submitted
+
+
+
 Section 10.3
   R-1: One team member is unavailable or ceases to participate before P2
        Everybody has contributed something to both P1 and P2
