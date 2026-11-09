@@ -24,6 +24,60 @@ Section 5.3
   K5: Fail, UC-03 doesn’t match to FR-05, there’s lacking requirements for quality and constraints for all use cases in 4.2
   K6: Pass, a credential is made in 5.2.2 and a password is generated in 5.2.1.
 
+Section 8
+  S-01 Backup Test
+       R-5 / ADR-01 / QAS-01 and QAS-04
+       Does the user run into any unpredicted behavior?
+       Completely empty vault with a premade account
+       1. Login 
+       2. Create two unique credentials
+       3. Create a backup
+       4. Delete one credential and create another unique credential
+       5. Load backup
+       6. See if the backup successfully loaded the deleted credential and
+       deletes the new credential
+       Number of errors or unexpected behavior encountered
+       Confirms R-5 with no major errors, confirms ADR-01 with successful layer communication, 
+       confirms QAS-01 with login, and confirms QAS-04 with multiple credential creations. 
+       Log file of actions and errors
+S-02 Encryption Test
+       R-2 / ADR-02  / QAS-02
+       Can somebody see unencrypted credentials without being logged in? 
+       A logged out account with a vault that contains at least one credential
+       1.Navigate to where credential data is stored 
+       2. Open credential files
+       3. Check whether files are legible/unencrypted
+       Number of unencrypted files
+       Confirms R-2 and QAS-02 with unintelligible credential files and 
+       confirms ADR-02 as the files are accessible from the computer.
+       Picture of credential files
+S-03 Account Creation
+       R-5 / ADR-03  / QAS-01, QAS-03, and QAS-04
+       Does the user run into any unpredicted behavior?
+       No account beforehand
+       1. Create account
+       2. Create one credential
+       3. Wait for 5 minutes and get logged out
+       4. Log in
+       5. Check if credential is still there after logging back in
+       Number of errors or unexpected behavior encountered
+       Confirms R-5 with no major errors, confirms ADR-03 by creating a main password, 
+       confirms QAS-01 logging in, confirms QAS-03 by waiting to be timed out, 
+       and confirms QAS-04 by creating a credential. 
+       Log file of actions and errors
+S-04 Different Encryptions
+       R-6 / ADR–03
+       Is encryption different between accounts? 
+       Have 2 different accounts
+       1. Create an identical credential in both accounts
+       2. Sign out from both accounts
+       3. Compare encrypted files for the specific credential data
+       0 - files are identical
+       1 - files are different
+       Confirms R-6 if the encryption is different between the credentials confirms
+       ADR–03 that with the same master password, the encryptions are still different
+       Picture of credential files
+
 Section 10.3
   R-1: One team member is unavailable or ceases to participate before P2
        Everybody has contributed something to both P1 and P2
