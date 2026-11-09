@@ -66,7 +66,7 @@ S-03 Account Creation
        and confirms QAS-04 by creating a credential. 
        Log file of actions and errors
 S-04 Different Encryptions
-       R-6 / QAS-04
+       R-6 / ADR–03
        Is encryption different between accounts? 
        Have 2 different accounts
        1. Create an identical credential in both accounts
