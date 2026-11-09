@@ -76,3 +76,12 @@ The matrix includes:
 - Links from analyzed use cases to Sections 4.2 and 5.2
 - Links from quality requirements to QAS-01 through QAS-04
 - Links from constraints to architectural decisions and Sections 6.2 and 6.4
+
+# 11 Open Questions
+
+- Updated the P1 open questions based on the current P2 decisions.
+- Closed Q1 after autofill was removed under CH-03.
+- Closed Q2 and Q3 based on the current backup and restore design in UC-03.
+- Added Q4 from ADR-02 about the local storage format.
+- Added Q5 from ADR-03 about master password recovery.
+- Updated the owners and due dates for the questions.
