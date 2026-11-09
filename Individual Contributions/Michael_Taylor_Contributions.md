@@ -57,7 +57,7 @@ ADR-02: Localized Vault Storage
 
 Status - Proposed
 
-Data and Owner: 11/7/2026 - Project Team
+Date and Owner: 11/7/2026 - Project Team
 
 Context (Drivers)
 The password management system is intended for a single user operating a single device. Storing vault information locally avoids dependency on external services, and reduces the operational complexity of using cloud-based storage. This decision aligns with the project's constraints on hosting.
@@ -68,7 +68,7 @@ Cloud-Based Storage - Store vault information on a remote server, allowing centr
 Mixed Storage - Maintain an encrypted local vault that also periodically updates/uploads the information with a remote service.
 
 Decision
-Use local-only storage for the password vault. Sensitive vault data will remain only on the user's device without requiring a remote server or cloud database. A simple, application-embedded database system created with SQLite may be used.
+Use local-only storage for the password vault. Sensitive vault data will remain only on the user's device without requiring a remote server or cloud database. A simple, application-embedded database system created with a tool/framework like SQLite may be used.
 
 Consequences
 Favors - Security, simplicity, independence from external services.
