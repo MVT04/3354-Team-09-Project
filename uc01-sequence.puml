@@ -18,13 +18,16 @@ else A1: restrictions conflict
   GC --> AH : 4b tells the account holder what conflicts and asks to change it
 end
 
-loop repeated while the account holder rejects the password (A2)
+loop repeated while the account holder rejects the password (10c, A2)
   GC -> PC : 5 asks for a password that fits the restrictions
   create GP
   PC -> GP : 6 produces a candidate password
   GC -> GP : 7 asks for its strength rating
   GP --> GC : 8 reports its strength rating
   GC --> AH : 9 shows the password and its strength rating
+  opt A2: rejects the password
+    AH -> GC : 10c rejects the password and asks for another
+  end
 end
 
 alt accepts

@@ -24,9 +24,10 @@ Author: Derek Chai (Derek-Chai)
 | 10 | AccountHolder | Accepts the password | value | GeneratorController |
 | 10a | AccountHolder | Cancels (A3) | | GeneratorController |
 | 10b | GeneratorController | Confirms no password was kept | | AccountHolder |
+| 10c | AccountHolder | Rejects the password and asks for another (A2) | value | GeneratorController |
 | 11 | GeneratorController | Confirms the password is ready to use | value | AccountHolder |
 
-GeneratorController is an interaction object that coordinates password generation and is in control of this interaction. Messages 5 to 9 repeat each time the account holder rejects the offered password (A2).
+GeneratorController is an interaction object that coordinates password generation and is in control of this interaction. When the account holder rejects the offered password (10c, A2), messages 5 to 9 repeat until the account holder accepts (10) or cancels (10a).
 
 **(c) Analysis sequence diagram.** See `diagrams/uc01-sequence.png` (source: `diagrams/uc01-sequence.puml`).
 
