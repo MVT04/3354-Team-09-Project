@@ -1,0 +1,46 @@
+@startuml
+title UC-02 Store New Credential - analysis sequence diagram
+
+actor ":AccountHolder" as AH
+participant ":CredentialController" as CC <<control>>
+participant ":Vault" as V
+participant ":Credential" as C
+
+AH -> CC : 1 submits the service, username and password
+CC -> CC : 2 checks that every required detail is present
+
+alt A1: a required detail is missing
+  CC --> AH : 2a names the missing detail and keeps what was entered
+end
+
+CC -> V : 3 asks whether the vault is unlocked
+
+alt vault is unlocked
+  V --> CC : 4 reports the vault is unlocked
+else A5: vault has locked from inactivity
+  V --> CC : 4a reports the vault is locked
+  CC --> AH : 4b asks the account holder to unlock before saving
+end
+
+CC -> V : 5 asks whether a credential exists for this service and username
+
+alt no matching credential
+  V --> CC : 6 reports no matching credential
+else A4: duplicate entry
+  V --> CC : 6a reports a matching credential
+  CC --> AH : 6b shows the existing credential and asks whether to replace it or cancel
+end
+
+create C
+CC -> C : 7 creates the credential from the entered details
+CC -> V : 8 asks the vault to add the credential
+
+alt saved
+  V --> CC : 9 confirms the credential is stored
+  CC --> AH : 10 confirms the save and shows the credential in the list
+else A2: saving fails
+  V --> CC : 9a reports the credential could not be stored
+  CC --> AH : 9b tells the account holder nothing was saved and to re-enter the details
+end
+
+@enduml
