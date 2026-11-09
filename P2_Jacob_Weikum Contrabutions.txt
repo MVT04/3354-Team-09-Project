@@ -34,10 +34,10 @@ Section 8
        3. Create a backup
        4. Delete one credential and create another unique credential
        5. Load backup
-       See if the backup successfully loaded the deleted credential without
-       deleting the new credential
+       6. See if the backup successfully loaded the deleted credential and
+       deletes the new credential
        Number of errors or unexpected behavior encountered
-       Confirms R-5 with no major errors, confirms ASR-01with successful layer communication, 
+       Confirms R-5 with no major errors, confirms ADR-01 with successful layer communication, 
        confirms QAS-01 with login, and confirms QAS-04 with multiple credential creations. 
        Log file of actions and errors
 S-02 Encryption Test
@@ -74,9 +74,9 @@ S-04 Different Encryptions
        3. Compare encrypted files for the specific credential data
        0 - files are identical
        1 - files are different
-      Confirms R-6 if the encryption is different between 
-      the credentials confirms QAS-04 with credential creation
-      Picture of credential files
+       Confirms R-6 if the encryption is different between the credentials confirms
+       ADR–03 that with the same master password, the encryptions are still different
+       Picture of credential files
 
 Section 10.3
   R-1: One team member is unavailable or ceases to participate before P2
