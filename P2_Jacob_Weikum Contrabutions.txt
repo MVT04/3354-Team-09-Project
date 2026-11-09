@@ -24,5 +24,37 @@ Section 5.3
   K5: Fail, UC-03 doesn’t match to FR-05, there’s lacking requirements for quality and constraints for all use cases in 4.2
   K6: Pass, a credential is made in 5.2.2 and a password is generated in 5.2.1.
 
+Section 10.3
+  R-1: One team member is unavailable or ceases to participate before P2
+       Everybody has contributed something to both P1 and P2
+       Likelihood - Low
+       Impact -  High
+      Everyone contributes towards the github via branches and reviews, and sections are divided out.
+  R-2: Credential encryption is not completed or performed in a secure manner.
+       More research and information has been found
+       Likelihood - Medium
+       Impact -  High
+       The encryption and decryption solely goes through Java’s standard library for security which allows for secure encryption.
+  R-3: Work on optional integrations in the context diagram delays the MUST requirements.
+       We’ve redefined our musts and shoulds and made our timeline more feasible
+       Likelihood - Low
+       Impact -  Medium
+       We will work on all Must cases before any other use cases.
+  R-4: The team runs short on time before the end of semester.
+       We have had our first meeting that let us plan P2
+       Likelihood - Low
+       Impact -  High
+       Group meetings and free communication allow for check ups and reprioritization. This allows us to point out flaws and finish before the deadline.
+  R-5: A change merged to main breaks working features close to a deadline.
+       Everybody has gotten more experience with merging and checking branches
+       Likelihood - Medium
+       Impact -  Low
+       Merges can be reverted plus merge requests must be reviewed.
+  R-6: Password encryption doesn’t change between accounts
+       New so N/A
+       Likelihood - Low
+       Impact -  High
+       Use Java’s standard library and other factors like time to create differentiation.
+
 Miscellaneous
   - Formatting edits for consistency 
